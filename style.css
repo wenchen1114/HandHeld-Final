@@ -1,0 +1,77 @@
+*{
+    margin: 0;
+    padding: 0;
+    background-color: #000117;
+}
+
+#container{
+    margin: auto;
+    width: 40%;
+    height: 100vh;
+    color: white;
+    font-family: aktiv-grotesk-extended,sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    overflow: hidden;
+}
+
+@media only screen and (max-width: 600px) {
+    #container{
+      margin: 0;
+      width:100%;
+    }
+  }
+
+#content{
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-top: 15vh;
+}
+
+#content-text{
+    display: flex;
+    flex-direction: column;
+    width: 65%;
+    overflow: visible;
+    padding-left: 10px;
+}
+
+
+
+#tarotCard{
+    float: right;
+    
+}
+
+#title{
+    font-size: 3em;
+    padding: 20px 0px;
+}
+
+#line{
+    border-left: 2px solid white;
+    height: 10vh;
+    margin-top: 5vh;
+}
+
+#credit{
+    color: white;
+    position: absolute;
+    margin-left:auto;
+    margin-right:auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    bottom: 10px;
+}
+
+a, a:visited{
+    font-family: aktiv-grotesk-extended,sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    padding: 5px 0px;
+    text-decoration: none;
+    color: white;
+}
