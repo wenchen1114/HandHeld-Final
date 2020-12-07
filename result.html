@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>myTarot</title>
+    <meta name="description" content="Welcome to myTarot!">
+    <script src="https://aframe.io/releases/1.1.0/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+    <a-assets>
+      <img id="sky" src="sky.jpg">
+      <a-asset-item
+        id="tarot-glb"
+        src="tarot-fool.glb"
+      ></a-asset-item>
+      <a-asset-item
+        id="tarot-glb-1"
+        src="tarot-magician.glb"
+      ></a-asset-item>
+      <a-asset-item
+        id="tarot-glb-2"
+        src="tarot-highpriestess.glb"
+      ></a-asset-item>
+      <a-asset-item
+        id="tarot-glb-3"
+        src="tarot-empress.glb"
+      ></a-asset-item>
+      <a-asset-item
+        id="tarot-glb-4"
+        src="tarot-emperor.glb"
+      ></a-asset-item>
+      <a-asset-item
+        id="tarot-glb-5"
+        src="tarot-hierophant.glb"
+      ></a-asset-item>
+      <a-asset-item
+        id="tarot-glb-6"
+        src="tarot-lovers.glb"
+      ></a-asset-item>
+      <a-asset-item
+        id="tarot-glb-7"
+        src="tarot-chariot.glb"
+      ></a-asset-item>
+      <a-asset-item
+        id="tarot-glb-8"
+        src="tarot-strength.glb"
+      ></a-asset-item>
+      <a-asset-item
+        id="tarot-glb-9"
+        src="tarot-hermit.glb"
+      ></a-asset-item>
+      <a-asset-item
+        id="tarot-glb-10"
+        src="tarot-wheeloffortune.glb"
+      ></a-asset-item>
+      <a-asset-item
+        id="tarot-glb-11"
+        src="tarot-justice.glb"
+      ></a-asset-item>
+      <a-asset-item
+        id="tarot-glb-12"
+        src="tarot-hangedman.glb"
+      ></a-asset-item>
+      <a-asset-item
+        id="tarot-glb-13"
+        src="tarot-death.glb"
+      ></a-asset-item>
+      <a-asset-item
+        id="tarot-glb-14"
+        src="tarot-temperance.glb"
+      ></a-asset-item>
+      <a-asset-item
+        id="tarot-glb-15"
+        src="tarot-devil.glb"
+      ></a-asset-item>
+      <a-asset-item
+        id="tarot-glb-16"
+        src="tarot-tower.glb"
+      ></a-asset-item>
+      <a-asset-item
+        id="tarot-glb-17"
+        src="tarot-star.glb"
+      ></a-asset-item>
+      <a-asset-item
+        id="tarot-glb-18"
+        src="tarot-moon.glb"
+      ></a-asset-item>
+      <a-asset-item
+        id="tarot-glb-19"
+        src="tarot-sun.glb"
+      ></a-asset-item>
+      <a-asset-item
+        id="tarot-glb-20"
+        src="tarot-judgement.glb"
+      ></a-asset-item>
+      <a-asset-item
+        id="tarot-glb-21"
+        src="tarot-world.glb"
+      ></a-asset-item>
+    </a-assets>
+    <a-sky src="#sky"></a-sky>
+    <a-entity camera look-controls position="0 1.6 0">
+      <a-entity cursor="fuse: true; fuseTimeout: 5000"
+                position="0 0 -1"
+                rotation="0 0 0"
+                geometry="primitive: ring; radiusInner: 0.025; radiusOuter: 0.03"
+                material="color: white; shader: flat">
+      </a-entity>
+    </a-entity>
+    <a-entity
+        id="card1"
+        gltf-model="#tarot-glb"
+        position="0 1.6 -2.5"
+        scale="1 1 1"
+        rotation="0 0 0"
+      ></a-entity>
+
+  </body>
+  <script src="result.js"></script>
+</html>

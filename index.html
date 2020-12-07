@@ -4,32 +4,300 @@
     <meta charset="utf-8">
     <title>myTarot</title>
     <meta name="description" content="Welcome to myTarot!">
-    <script src="https://aframe.io/releases/1.0.3/aframe.min.js"></script>
+    <script src="https://aframe.io/releases/1.1.0/aframe.min.js"></script>
   </head>
   <body>
     <a-scene>
     <a-assets>
       <img id="sky" src="sky.jpg">
       <a-asset-item
-          id="tarot-obj"
-          src="tarot.obj"
-        ></a-asset-item>
-      <a-asset-item
-        id="tarot-mtl"
-        src="tarot.mtl"
+        id="tarot-glb"
+        src="tarot-fool.glb"
       ></a-asset-item>
       <a-asset-item
-        id="tarot-glb"
-        src="tarot.glb"
+        id="tarot-glb-1"
+        src="tarot-magician.glb"
+      ></a-asset-item>
+      <a-asset-item
+        id="tarot-glb-2"
+        src="tarot-highpriestess.glb"
+      ></a-asset-item>
+      <a-asset-item
+        id="tarot-glb-3"
+        src="tarot-empress.glb"
+      ></a-asset-item>
+      <a-asset-item
+        id="tarot-glb-4"
+        src="tarot-emperor.glb"
+      ></a-asset-item>
+      <a-asset-item
+        id="tarot-glb-5"
+        src="tarot-hierophant.glb"
+      ></a-asset-item>
+      <a-asset-item
+        id="tarot-glb-6"
+        src="tarot-lovers.glb"
+      ></a-asset-item>
+      <a-asset-item
+        id="tarot-glb-7"
+        src="tarot-chariot.glb"
+      ></a-asset-item>
+      <a-asset-item
+        id="tarot-glb-8"
+        src="tarot-strength.glb"
+      ></a-asset-item>
+      <a-asset-item
+        id="tarot-glb-9"
+        src="tarot-hermit.glb"
+      ></a-asset-item>
+      <a-asset-item
+        id="tarot-glb-10"
+        src="tarot-wheeloffortune.glb"
+      ></a-asset-item>
+      <a-asset-item
+        id="tarot-glb-11"
+        src="tarot-justice.glb"
+      ></a-asset-item>
+      <a-asset-item
+        id="tarot-glb-12"
+        src="tarot-hangedman.glb"
+      ></a-asset-item>
+      <a-asset-item
+        id="tarot-glb-13"
+        src="tarot-death.glb"
+      ></a-asset-item>
+      <a-asset-item
+        id="tarot-glb-14"
+        src="tarot-temperance.glb"
+      ></a-asset-item>
+      <a-asset-item
+        id="tarot-glb-15"
+        src="tarot-devil.glb"
+      ></a-asset-item>
+      <a-asset-item
+        id="tarot-glb-16"
+        src="tarot-tower.glb"
+      ></a-asset-item>
+      <a-asset-item
+        id="tarot-glb-17"
+        src="tarot-star.glb"
+      ></a-asset-item>
+      <a-asset-item
+        id="tarot-glb-18"
+        src="tarot-moon.glb"
+      ></a-asset-item>
+      <a-asset-item
+        id="tarot-glb-19"
+        src="tarot-sun.glb"
+      ></a-asset-item>
+      <a-asset-item
+        id="tarot-glb-20"
+        src="tarot-judgement.glb"
+      ></a-asset-item>
+      <a-asset-item
+        id="tarot-glb-21"
+        src="tarot-world.glb"
       ></a-asset-item>
     </a-assets>
     <a-sky src="#sky"></a-sky>
+      <a-entity camera look-controls position="0 1.6 0">
+        <a-entity cursor="fuse: true; fuseTimeout: 6000"
+                  position="0 0 -1"
+                  geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03"
+                  material="color: white; shader: flat">
+        </a-entity>
+      </a-entity>
+    <a-entity 
+        text="value: Think about the question you would like to ask whie looking around to pick a card; width: 6; lineHeight: 50; align: center;"
+        position="0 3.5 -2.5"
+        scale="1 1 1"
+    >
+      </a-entity>
+      <a-entity 
+      text="value: Gaze at the card you want to pick for 5 seconds to see the result; width: 6; lineHeight: 50; align: center;"
+      position="0 3.5 2"
+      rotation="0 180 0"
+      scale="1 1 1"
+      wrapCount="20"
+  >
+    </a-entity>
     <a-entity
+        id="card6"
         gltf-model="#tarot-glb"
         position="0 1.6 -2.5"
         scale="1 1 1"
-        animation="property: rotation; to: 0 180 0; dur: 2500; easing:easeOutSine; loop:true; dir: alternate"
+        rotation="0 0 0"
+        link="href:result.html"
       ></a-entity>
+      <a-entity
+      id="card7"
+      gltf-model="#tarot-glb"
+      position="0.7 1.6 -2.4"
+      scale="1 1 1"
+      rotation="0 -18 0"
+      link="href:result.html"
+    ></a-entity>
+    <a-entity
+    id="card8"
+      gltf-model="#tarot-glb"
+      position="1.4 1.6 -2.2"
+      scale="1 1 1"
+      rotation="0 -36 0"
+      link="href:result.html"
+    ></a-entity>
+    <a-entity
+    id="card9"
+      gltf-model="#tarot-glb"
+      position="2.1 1.6 -1.9"
+      scale="1 1 1"
+      rotation="0 -54 0"
+      link="href:result.html"
+    ></a-entity>
+    <a-entity
+    id="card10"
+      gltf-model="#tarot-glb"
+      position="2.7 1.6 -1.5"
+      scale="1 1 1"
+      rotation="0 -72 0"
+      link="href:result.html"
+    ></a-entity>
+    <a-entity
+    id="card11"
+      gltf-model="#tarot-glb"
+      position="3.2 1.6 -1"
+      scale="1 1 1"
+      rotation="0 -90 0"
+      link="href:result.html"
+    ></a-entity>
+      <a-entity
+      id="card5"
+      gltf-model="#tarot-glb"
+      position="-0.7 1.6 -2.4"
+      scale="1 1 1"
+      rotation="0 18 0"
+      link="href:result.html"
+    ></a-entity>
+    <a-entity
+    id="card4"
+      gltf-model="#tarot-glb"
+      position="-1.4 1.6 -2.2"
+      scale="1 1 1"
+      rotation="0 36 0"
+      link="href:result.html"
+    ></a-entity>
+    <a-entity
+    id="card3"
+      gltf-model="#tarot-glb"
+      position="-2.1 1.6 -1.9"
+      scale="1 1 1"
+      rotation="0 54 0"
+      link="href:result.html"
+    ></a-entity>
+    <a-entity
+    id="card2"
+      gltf-model="#tarot-glb"
+      position="-2.7 1.6 -1.5"
+      scale="1 1 1"
+      rotation="0 72 0"
+      link="href:result.html"
+    ></a-entity>
+    <a-entity
+    id="card1"
+      gltf-model="#tarot-glb"
+      position="-3.2 1.6 -1"
+      scale="1 1 1"
+      rotation="0 90 0"
+      link="href:result.html"
+    ></a-entity>
+    <a-entity
+    id="card17"
+        gltf-model="#tarot-glb"
+        position="0 1.6 2.5"
+        scale="1 1 1"
+        rotation="0 -180 0"
+        link="href:result.html"
+      ></a-entity>
+      <a-entity
+      id="card16"
+      gltf-model="#tarot-glb"
+      position="0.7 1.6 2.4"
+      scale="1 1 1"
+      rotation="0 -162 0"
+      link="href:result.html"
+    ></a-entity>
+    <a-entity
+    id="card15"
+      gltf-model="#tarot-glb"
+      position="1.4 1.6 2.2"
+      scale="1 1 1"
+      rotation="0 -144 0"
+      link="href:result.html"
+    ></a-entity>
+    <a-entity
+    id="card14"
+      gltf-model="#tarot-glb"
+      position="2.1 1.6 1.9"
+      scale="1 1 1"
+      rotation="0 -126 0"
+      link="href:result.html"
+    ></a-entity>
+    <a-entity
+    id="card13"
+      gltf-model="#tarot-glb"
+      position="2.7 1.6 1.5"
+      scale="1 1 1"
+      rotation="0 -108 0"
+      link="href:result.html"
+    ></a-entity>
+    <a-entity
+    id="card12"
+      gltf-model="#tarot-glb"
+      position="3.2 1.6 1"
+      scale="1 1 1"
+      rotation="0 -90 0"
+      link="href:result.html"
+    ></a-entity>
+      <a-entity
+      id="card18"
+      gltf-model="#tarot-glb"
+      position="-0.7 1.6 2.4"
+      scale="1 1 1"
+      rotation="0 -198 0"
+      link="href:result.html"
+    ></a-entity>
+    <a-entity
+    id="card19"
+      gltf-model="#tarot-glb"
+      position="-1.4 1.6 2.2"
+      scale="1 1 1"
+      rotation="0 -216 0"
+      link="href:result.html"
+    ></a-entity>
+    <a-entity
+    id="card20"
+      gltf-model="#tarot-glb"
+      position="-2.1 1.6 1.9"
+      scale="1 1 1"
+      rotation="0 -234 0"
+      link="href:result.html"
+    ></a-entity>
+    <a-entity
+    id="card21"
+      gltf-model="#tarot-glb"
+      position="-2.7 1.6 1.5"
+      scale="1 1 1"
+      rotation="0 -252 0"
+      link="href:result.html"
+    ></a-entity>
+    <a-entity
+    id="card22"
+      gltf-model="#tarot-glb"
+      position="-3.2 1.6 1"
+      scale="1 1 1"
+      rotation="0 -270 0"
+      link="href:result.html"
+    ></a-entity>
   </a-scene>
   </body>
+  <script src="index.js"></script>
 </html>
