@@ -7,6 +7,7 @@ for(let j=0; j<i; j++){
     randomCardId.push(cardId[randomNum]);
     cardId.splice(randomNum,1);
 }
+let pos;
 
 let card1 = document.getElementById("card1");
 let card2 = document.getElementById("card2");
@@ -35,31 +36,16 @@ let cards = [card1, card2, card3, card4, card5, card6, card7, card8, card9, card
 for(let i = 0; i<21; i++){
     cards[i].setAttribute("gltf-model", randomCardId[i]);
     if(i<11){
-        if(Math.random()>0.5){
         cards[i].object3D.rotation.set(
             THREE.Math.degToRad(0),
             THREE.Math.degToRad(90-18*i),
-            THREE.Math.degToRad(0)
-        );}else{
-            cards[i].object3D.rotation.set(
-                THREE.Math.degToRad(0),
-                THREE.Math.degToRad(90-18*i),
-                THREE.Math.degToRad(180)
-            );
-        }
+            THREE.Math.degToRad(0)       
+        );
     }else{
-        if(Math.random()>0.5){
             cards[i].object3D.rotation.set(
                 THREE.Math.degToRad(0),
                 THREE.Math.degToRad((-90)-18*i),
-                THREE.Math.degToRad(0)
-            );}else{
-                cards[i].object3D.rotation.set(
-                    THREE.Math.degToRad(0),
-                    THREE.Math.degToRad((-90)-18*i),
-                    THREE.Math.degToRad(180)
-                );
-            }
+                THREE.Math.degToRad(0));
     }
       cards[i].object3D.rotation.x += Math.PI;
       cards[i].addEventListener("click", function(evt){
